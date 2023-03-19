@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback Form</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1>Feedback Form</h1>
+  <h5>Let us know what you think about ASRJC facility</h5>
+	<form method="POST" action="{{ url_for('submit') }}">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="age">Age:</label>
+		<input type="number" id="age" name="age" required>
+
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender" required>
+			<option value="">Please select</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+
+		<label for="class">Class:</label>
+		<input type="text" id="class" name="class" required>
+
+    <label for="rating">How would you rate our school facility?</label>
+      <input type="radio" id="Very bad" name="rating" value="Very bad">
+      <label for="Very bad" style="font-weight:normal;">Very bad</label>
+      <input type="radio" id="Bad" name="rating" value="Bad">
+      <label for="Bad" style="font-weight:normal;">Bad</label>
+      <input type="radio" id="Normal" name="rating" value="Normal" checked>
+      <label for="Normal" style="font-weight:normal;">Normal</label>
+      <input type="radio" id="Good" name="rating" value="Good">
+      <label for="Good" style="font-weight:normal;">Good</label>
+      <input type="radio" id="Very good" name="rating" value="Very good">
+      <label for="Very good" style="font-weight:normal;">Very good</label>
+    
+		<label for="feedback">What would you like our school facility to improve on?</label>
+		<textarea id="feedback" name="feedback" required></textarea>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
