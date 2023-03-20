@@ -9,7 +9,7 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    data = None
+    data = 'a'
     name = request.form.get('name')
     email = request.form.get('email')
     age = request.form.get('age')
@@ -20,6 +20,10 @@ def submit():
 
     if(feedback == 'Easter egg'):
 		    data = 'egg'
+    elif(feedback == 'i love asr'):
+        data = 'asr'
+    elif(feedback == 'nil'):
+        data = 'lame'
   
     with open('submission.csv', 'a', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
