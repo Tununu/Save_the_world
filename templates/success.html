@@ -5,6 +5,23 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+ 
+{% if data == 'egg' %}
+<script>
+window.location.replace("https://tenor.com/view/egg-egg-static-dancing-dance-moves-gif-17838100");
+</script>
+  
+{% elif data == 'asr' %}
+<script>
+window.location.replace("https://www.moe.gov.sg/schoolfinder/schooldetail?schoolname=anderson-serangoon-junior-college");
+</script>
+
+{% elif data == 'lame' %}
+<script>
+window.location.replace("https://tenor.com/view/ugh-you-are-so-lame-uncool-gif-15573327");
+</script>
+{% endif %}
+  
 	<h1>Thanks for your feedback, {{ name }}!</h1>
 </body>
 </html>
